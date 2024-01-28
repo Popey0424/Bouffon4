@@ -1,0 +1,30 @@
+Sans titre-2 (2).png
+size:1376,398
+filter:Linear,Linear
+pma:true
+perso/bras droit
+bounds:522,33,280,90
+perso/bras gauche
+bounds:522,125,260,271
+perso/chpeau
+bounds:2,4,518,392
+perso/cou
+bounds:971,172,186,224
+perso/darp
+bounds:804,2,257,149
+perso/grelot 1
+bounds:1267,9,64,65
+perso/grelot 2
+bounds:1267,9,64,65
+perso/jambe droite
+bounds:1267,76,103,141
+perso/jambe gauche
+bounds:1297,220,77,176
+perso/pantalon
+bounds:1159,219,177,136
+rotate:90
+perso/tete
+bounds:784,153,185,243
+perso/torse
+bounds:1063,11,159,202
+rotate:90
