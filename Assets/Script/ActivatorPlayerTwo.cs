@@ -16,6 +16,7 @@ public class ActivatorPlayerTwo : MonoBehaviour
     bool active = false;
     GameObject note;
     public TMP_Text Multiplicateur_Two;
+    public GameObject Spines2;
     void Start()
     {
         ScoreManager.ChaugeCommune2 = 1f;
@@ -56,6 +57,7 @@ public class ActivatorPlayerTwo : MonoBehaviour
             ScoreManager.Multiplication_Player_Two_Commun++;
             Multiplicateur_Two.text = "X" + ScoreManager.Multiplication_Player_Two_Commun.ToString();
             ScoreManager.instance.AddPointsPlayerTwo();
+            Spines2.GetComponent<AnimaSPineELora>().Activation2 = true;
         }
     
 

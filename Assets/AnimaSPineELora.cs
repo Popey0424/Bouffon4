@@ -4,14 +4,14 @@ using JetBrains.Annotations;
 using Unity.Collections;
 using System.Collections;
 
-public class StopStartSpineAnimation : MonoBehaviour
+public class AnimaSPineELora : MonoBehaviour
 {
     private SkeletonAnimation skeletonAnimation;
     public GameObject ImageUne;
     public GameObject ImageDeux;
     public GameObject ImageTrois;
     private MeshRenderer meshRenderer;
-    public bool Activation = false;
+    public bool Activation2 = false;
     public float timer;
 
     void Start()
@@ -29,31 +29,31 @@ public class StopStartSpineAnimation : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1) && Activation == true) //&& active == true )
+        if (Input.GetKeyDown(KeyCode.F4)) //&& active == true )
         {
             meshRenderer.enabled = false;
             ImageUne.SetActive(true);
             ImageDeux.SetActive(false);
             ImageTrois.SetActive(false);
-            StartCoroutine(F1());
+            StartCoroutine(F2());
         }
 
-        if (Input.GetKeyDown(KeyCode.F2) && Activation == true)
+        if (Input.GetKeyDown(KeyCode.F5))
         {
             meshRenderer.enabled = false;
             ImageUne.SetActive(false);
             ImageDeux.SetActive(true);
             ImageTrois.SetActive(false);
-            StartCoroutine(F1());
+            StartCoroutine(F2());
         }
 
-        if (Input.GetKeyDown(KeyCode.F3) && Activation == true)
+        if (Input.GetKeyDown(KeyCode.F6))
         {
             meshRenderer.enabled = false;
             ImageUne.SetActive(false);
             ImageDeux.SetActive(false);
             ImageTrois.SetActive(true);
-            StartCoroutine(F1());
+            StartCoroutine(F2());
 
         }
 
@@ -70,7 +70,7 @@ public class StopStartSpineAnimation : MonoBehaviour
 
     }
 
-    IEnumerator F1()
+    IEnumerator F2()
     {
 
         yield return new WaitForSeconds(timer);
@@ -79,7 +79,7 @@ public class StopStartSpineAnimation : MonoBehaviour
         ImageUne.SetActive(false);
         ImageDeux.SetActive(false);
         ImageTrois.SetActive(false);
-        Activation = false;
+        Activation2 = false;
 
 
     }

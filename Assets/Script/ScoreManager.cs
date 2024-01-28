@@ -18,6 +18,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject PrefabHitPointPlayerOne;
     public GameObject PrefabHitPointPlayerTwo;
     public Canvas Canvas;
+    public GameObject PrefabGoodPointPlayerOne;
 
 
     
@@ -69,6 +70,11 @@ public class ScoreManager : MonoBehaviour
     public void AddPointsPlayerOne()
     {
         scorePlayerOne += 1 * Multiplication_Player_One_Commun;
+        GameObject Go = GameObject.Instantiate(PrefabGoodPointPlayerOne, Canvas.transform, false);
+        Go.transform.localPosition = /*new Vector3(0, 0, 0);*/ UnityEngine.Random.insideUnitCircle * 25;
+        Go.transform.DOLocalMoveY(150, 0.8f);
+        Go.GetComponent<Text>().DOFade(0, 0.8f);
+        GameObject.Destroy(Go, 0.8f);
         ScoreTextOne.text = scorePlayerOne.ToString() + "Score";
         GameObject go = GameObject.Instantiate(PrefabHitPointPlayerOne, Canvas.transform, false);
         go.transform.localPosition = /*new Vector3(0, 0, 0);*/ UnityEngine.Random.insideUnitCircle * 100;

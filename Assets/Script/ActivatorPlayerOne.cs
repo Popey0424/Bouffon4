@@ -14,6 +14,7 @@ public class Activator : MonoBehaviour
     public float Degat;
     public float Chauge;
     public TMP_Text Multiplicateur_One;
+    public GameObject Spines;
     //public GameObject noteGlow;
 
     void Start()
@@ -55,6 +56,7 @@ public class Activator : MonoBehaviour
             ScoreManager.Multiplication_Player_One_Commun++;
             Multiplicateur_One.text = "X" + ScoreManager.Multiplication_Player_One_Commun.ToString();
             ScoreManager.instance.AddPointsPlayerOne();
+            Spines.GetComponent<StopStartSpineAnimation>().Activation = true;
         }
         else if (Input.GetKeyDown(key) && !active)
         {
