@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 124327904}
   - component: {fileID: 124327908}
   m_Layer: 0
-  m_Name: Spine GameObject (test DA)
+  m_Name: elora
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 124327903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32921f028a673ba438fe21a025cd58a0, type: 3}
+  m_Script: {fileID: 11500000, guid: ab705f7eb5cd4a545996e81f0cce3ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ImageUne: {fileID: 1032763611}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 199683551}
   - component: {fileID: 199683555}
   m_Layer: 0
-  m_Name: Spine GameObject (Sans titre-2 (2))
+  m_Name: Leo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,7 +973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2209888128811588827, guid: 9feb4468edc606d4c8c5f726b7e7535f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.783
+      value: -2.82
       objectReference: {fileID: 0}
     - target: {fileID: 2209888128811588827, guid: 9feb4468edc606d4c8c5f726b7e7535f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1124,8 +1124,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335488092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6554618, y: 0.61175096, z: -0.059354685}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.83, y: 4.77, z: -0.059354685}
+  m_LocalScale: {x: 1.1943276, y: 1.1943276, z: 1.1943276}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 257673813}
@@ -2150,7 +2150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2209888128811588827, guid: 9feb4468edc606d4c8c5f726b7e7535f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11
+      value: -3.4930003
       objectReference: {fileID: 0}
     - target: {fileID: 2209888128811588827, guid: 9feb4468edc606d4c8c5f726b7e7535f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2374,7 +2374,7 @@ MonoBehaviour:
   PrefabHitPointPlayerOne: {fileID: 3456985527418622987, guid: 2b45ac19095a2434591d67503741d7f5, type: 3}
   PrefabHitPointPlayerTwo: {fileID: 3456985527418622987, guid: cc323f24e9092f34d85ddeb576cd6a1d, type: 3}
   Canvas: {fileID: 611549414}
-  PrefabGoodPointPlayerOne: {fileID: 0}
+  PrefabGoodPointPlayerOne: {fileID: 7404992908270123120, guid: d5a1168f9bc588044a408cdc6d76fd74, type: 3}
 --- !u!1 &615375372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5701,7 +5701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2209888128811588827, guid: 9feb4468edc606d4c8c5f726b7e7535f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.48
+      value: -2.1230001
       objectReference: {fileID: 0}
     - target: {fileID: 2209888128811588827, guid: 9feb4468edc606d4c8c5f726b7e7535f, type: 3}
       propertyPath: m_LocalPosition.z

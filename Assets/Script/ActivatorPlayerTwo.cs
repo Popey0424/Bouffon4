@@ -57,7 +57,7 @@ public class ActivatorPlayerTwo : MonoBehaviour
             ScoreManager.Multiplication_Player_Two_Commun++;
             Multiplicateur_Two.text = "X" + ScoreManager.Multiplication_Player_Two_Commun.ToString();
             ScoreManager.instance.AddPointsPlayerTwo();
-            Spines2.GetComponent<AnimaSPineELora>().Activation2 = true;
+            Spines2.GetComponent<StopStartSpineAnimation2>().Activation2 = true;
         }
     
 

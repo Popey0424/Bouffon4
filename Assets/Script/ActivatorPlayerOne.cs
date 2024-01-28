@@ -57,6 +57,7 @@ public class Activator : MonoBehaviour
             Multiplicateur_One.text = "X" + ScoreManager.Multiplication_Player_One_Commun.ToString();
             ScoreManager.instance.AddPointsPlayerOne();
             Spines.GetComponent<StopStartSpineAnimation>().Activation = true;
+            //AnimationSpines
         }
         else if (Input.GetKeyDown(key) && !active)
         {
