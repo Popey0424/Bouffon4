@@ -19,7 +19,7 @@ public class ActivatorPlayerTwo : MonoBehaviour
     void Start()
     {
         ScoreManager.ChaugeCommune2 = 1f;
-        Multiplicateur_Two.text = ScoreManager.Multiplication_Player_Two_Commun.ToString() + "multiplicateur";
+        Multiplicateur_Two.text = "X" + ScoreManager.Multiplication_Player_Two_Commun.ToString();
         if (yourImage == null)
         {
             ChangeFillAmount(1f);
@@ -54,7 +54,7 @@ public class ActivatorPlayerTwo : MonoBehaviour
         {
             Destroy(note);
             ScoreManager.Multiplication_Player_Two_Commun++;
-            Multiplicateur_Two.text = ScoreManager.Multiplication_Player_Two_Commun.ToString() + " multiplicateur";
+            Multiplicateur_Two.text = "X" + ScoreManager.Multiplication_Player_Two_Commun.ToString();
             ScoreManager.instance.AddPointsPlayerTwo();
         }
     
@@ -69,7 +69,7 @@ public class ActivatorPlayerTwo : MonoBehaviour
                 
             }
             ChangeFillAmount(ScoreManager.ChaugeCommune2);
-            Multiplicateur_Two.text = ScoreManager.Multiplication_Player_Two_Commun.ToString() + " multiplicateur";
+            Multiplicateur_Two.text = "X" + ScoreManager.Multiplication_Player_Two_Commun.ToString();
         }
 
     }

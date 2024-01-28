@@ -20,7 +20,7 @@ public class Activator : MonoBehaviour
     {
         ScoreManager.ChaugeCommune = 1f;
 
-        Multiplicateur_One.text = ScoreManager.Multiplication_Player_One_Commun.ToString() + " multiplicateur";
+        Multiplicateur_One.text = "X"+ScoreManager.Multiplication_Player_One_Commun.ToString();
             if (yourImage == null)
             {
                 ChangeFillAmount(1f);
@@ -53,7 +53,7 @@ public class Activator : MonoBehaviour
             //noteGlow.SetActive(true);
             Destroy(note);
             ScoreManager.Multiplication_Player_One_Commun++;
-            Multiplicateur_One.text = ScoreManager.Multiplication_Player_One_Commun.ToString() + " multiplicateur";
+            Multiplicateur_One.text = "X" + ScoreManager.Multiplication_Player_One_Commun.ToString();
             ScoreManager.instance.AddPointsPlayerOne();
         }
         else if (Input.GetKeyDown(key) && !active)
@@ -66,7 +66,7 @@ public class Activator : MonoBehaviour
                 ScoreManager.ChaugeCommune = 0;
             }
             ChangeFillAmount(ScoreManager.ChaugeCommune);
-            Multiplicateur_One.text = ScoreManager.Multiplication_Player_One_Commun.ToString() + " multiplicateur";
+            Multiplicateur_One.text = "X" + ScoreManager.Multiplication_Player_One_Commun.ToString();
         }
     }
 
