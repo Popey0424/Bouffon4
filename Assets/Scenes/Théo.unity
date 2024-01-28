@@ -2089,8 +2089,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571785181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: -1.43, z: -5.359535}
-  m_LocalScale: {x: 0.70169526, y: 4.386199, z: 1}
+  m_LocalPosition: {x: -1.18, y: 0.98, z: -5.359535}
+  m_LocalScale: {x: 1.1577972, y: 4.386199, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2510,8 +2510,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294439279
-  m_fontColor: {r: 0.43529415, g: 0.9450981, b: 0.9686275, a: 1}
+    rgba: 4278977114
+  m_fontColor: {r: 0.3529412, g: 0.007843138, b: 0.04705883, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2887,8 +2887,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294901395
-  m_fontColor: {r: 0.5764706, g: 0.9960785, b: 0.9960785, a: 1}
+    rgba: 4278977114
+  m_fontColor: {r: 0.3529412, g: 0.007843138, b: 0.04705883, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4933,8 +4933,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389746968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.49, y: -1.43, z: -5.359535}
-  m_LocalScale: {x: 0.70169526, y: 4.386199, z: 1}
+  m_LocalPosition: {x: 1.03, y: 0.85, z: -5.359535}
+  m_LocalScale: {x: 1.1577972, y: 4.386199, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
