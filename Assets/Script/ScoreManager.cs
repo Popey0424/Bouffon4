@@ -18,10 +18,15 @@ public class ScoreManager : MonoBehaviour
     public GameObject PrefabHitPointPlayerOne;
     public GameObject PrefabHitPointPlayerTwo;
     public Canvas Canvas;
+    public Canvas Perfect;
     public GameObject PrefabGoodPointPlayerOne;
+    public GameObject PrefabGoodPointPlayerTwo;
+    public GameObject PrefabPerfectPlayerOne;
+    public GameObject PrefabPerfectPlayerTwo;
+    public Transform player1Transform, player2Transform;
 
 
-    
+
     public static int Multiplication_Player_One_Commun = 0;
     public static int Multiplication_Player_Two_Commun = 0;
     public static int test_static = 0;
@@ -65,19 +70,34 @@ public class ScoreManager : MonoBehaviour
         {
             KingLookFront();
         }
+
+
     }
 
     public void AddPointsPlayerOne()
     {
         scorePlayerOne += 1 * Multiplication_Player_One_Commun;
+
+        Vector2 playerPos = new Vector2(player1Transform.position.x, player1Transform.position.y);
+        Vector2 canvasPos = Camera.main.WorldToScreenPoint(playerPos);
+
+        if (Multiplication_Player_One_Commun > 1)
+        {
+            GameObject gO = GameObject.Instantiate(PrefabPerfectPlayerOne, Canvas.transform, false);
+            gO.transform.localPosition = /*new Vector3(0, 0, 0);*/ canvasPos + Random.insideUnitCircle * 125;
+            gO.transform.DOLocalMoveY(20, 0.8f);
+            gO.GetComponent<Text>().DOFade(0, 0.8f);
+            GameObject.Destroy(gO, 0.8f);
+        }
+
         GameObject Go = GameObject.Instantiate(PrefabGoodPointPlayerOne, Canvas.transform, false);
-        Go.transform.localPosition = /*new Vector3(0, 0, 0);*/ UnityEngine.Random.insideUnitCircle * 25;
-        Go.transform.DOLocalMoveY(150, 0.8f);
+        Go.transform.localPosition = /*new Vector3(0, 0, 0);*/ canvasPos + Random.insideUnitCircle * 125;
+        Go.transform.DOLocalMoveY(20, 0.8f);
         Go.GetComponent<Text>().DOFade(0, 0.8f);
         GameObject.Destroy(Go, 0.8f);
         ScoreTextOne.text = scorePlayerOne.ToString() + "Score";
-        GameObject go = GameObject.Instantiate(PrefabHitPointPlayerOne, Canvas.transform, false);
-        go.transform.localPosition = /*new Vector3(0, 0, 0);*/ UnityEngine.Random.insideUnitCircle * 100;
+        GameObject go = GameObject.Instantiate(PrefabHitPointPlayerOne, Perfect.transform, false);
+        go.transform.localPosition = /*new Vector3(0, 0, 0);*/ canvasPos + Random.insideUnitCircle * 25;
         go.transform.DOLocalMoveY(150, 0.8f);
         go.GetComponent<Text>().DOFade(0, 0.8f);
         GameObject.Destroy(go, 0.8f);
@@ -87,10 +107,26 @@ public class ScoreManager : MonoBehaviour
 
     public void AddPointsPlayerTwo()
     {
-        scorePlayerTwo += 1 * Multiplication_Player_Two_Commun;
-        ScoreTextTwo.text = scorePlayerTwo.ToString() + "Score";
-        GameObject go = GameObject.Instantiate(PrefabHitPointPlayerTwo, Canvas.transform, false);
-        go.transform.localPosition = /*new Vector3(0, 0, 0);*/ UnityEngine.Random.insideUnitCircle * 100;
+        scorePlayerOne += 1 * Multiplication_Player_One_Commun;
+
+
+        if (Multiplication_Player_One_Commun > 1)
+        {
+            GameObject gO = GameObject.Instantiate(PrefabPerfectPlayerTwo, Canvas.transform, false);
+            gO.transform.localPosition = /*new Vector3(0, 0, 0);*/ Random.insideUnitCircle * 125;
+            gO.transform.DOLocalMoveY(20, 0.8f);
+            gO.GetComponent<Text>().DOFade(0, 0.8f);
+            GameObject.Destroy(gO, 0.8f);
+        }
+
+        GameObject Go = GameObject.Instantiate(PrefabGoodPointPlayerTwo, Canvas.transform, false);
+        Go.transform.localPosition = /*new Vector3(0, 0, 0);*/ Random.insideUnitCircle * 125;
+        Go.transform.DOLocalMoveY(20, 0.8f);
+        Go.GetComponent<Text>().DOFade(0, 0.8f);
+        GameObject.Destroy(Go, 0.8f);
+        ScoreTextOne.text = scorePlayerOne.ToString() + "Score";
+        GameObject go = GameObject.Instantiate(PrefabHitPointPlayerTwo, Perfect.transform, false);
+        go.transform.localPosition = /*new Vector3(0, 0, 0);*/ Random.insideUnitCircle * 25;
         go.transform.DOLocalMoveY(150, 0.8f);
         go.GetComponent<Text>().DOFade(0, 0.8f);
         GameObject.Destroy(go, 0.8f);
